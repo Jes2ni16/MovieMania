@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+   body {
+    @apply scrollbar-thin scrollbar-thumb-neutral-800 scrollbar-track-neutral-900
+   }
+}
+
+@layer components {
+  .transition-smooth {
+    @apply transition-all duration-150 ease-in;
+  }
+}
+
+@layer components {
+  .nav__links {
+    @apply text-white text-2xl md:text-sm py-[.4rem] md:py-0 md:px-3 font-normal md:font-medium hover:text-yellow-500 transition-colors duration-300;
+  }
+
+  .custom-container {
+    @apply w-full max-w-[1300px] mx-auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* loader */
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: transparent;
+  animation: rot1 1.2s linear infinite;
+}
+
+@keyframes rot1 {
+  to {
+    transform: rotate(360deg);
+  }
+}
